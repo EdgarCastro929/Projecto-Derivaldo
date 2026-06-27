@@ -1,0 +1,59 @@
+<i class="fa-solid fa-circle-user"></i> circulo user
+<i class="fa-solid fa-image"></i> imagem 
+<i class="fa-solid fa-bell"></i> sino
+<i class="fa-regular fa-bell"></i>sino branco
+<i class="fa-solid fa-calendar"></i> agenda preta
+<i class="fa-regular fa-calendar"></i> agenda branco
+<i class="fa-solid fa-user"></i> user
+<i class="fa-regular fa-user"></i> user branco
+<i class="fa-solid fa-comment"></i> comentario
+<i class="fa-regular fa-comment"></i> comentario branco
+<i class="fa-solid fa-envelope"></i> envelope
+<i class="fa-regular fa-envelope"></i> envelope branco
+<i class="fa-solid fa-eye"></i> olho aberto
+<i class="fa-solid fa-eye-slash"></i> olho fechado
+<i class="fa-solid fa-print"></i> imprissora preta 
+<i class="fa-solid fa-magnifying-glass"></i> lupa de pesquisa
+<i class="fa-brands fa-github"></i> github
+<i class="fa-brands fa-facebook"></i> facebook
+<i class="fa-brands fa-linkedin"></i> linkdin
+<i class="fa-brands fa-discord"></i> descord
+<i class="fa-brands fa-instagram"></i> instagram
+<i class="fa-solid fa-bars"></i> barra de menu
+<i class="fa-solid fa-cart-shopping"></i> carrinho preto
+<i class="fa-regular fa-cart-shopping"></i> carrinho branco
+<i class="fa-solid fa-xmark"></i> X
+<i class="fa-regular fa-xmark"></i> x
+<i class="fa-solid fa-paperclip"></i> anexar
+<i class="fa-regular fa-paperclip"></i> anexo fino
+<i class="fa-solid fa-pen"></i> lapis
+<i class="fa-solid fa-list"></i> lista
+<i class="fa-solid fa-gear"> ferrantas
+<i class="fa-regular fa-gear"></i> ferranta branca
+<i class="fa-solid fa-pen-to-square"></i> editar
+<i class="fa-regular fa-pen-to-square"></i> editar branco 
+<i class="fa-solid fa-plus"></i> +
+<i class="fa-solid fa-minus"></i> -
+<i class="fa-solid fa-trash"></i> balde de lixo
+<i class="fa-regular fa-trash"></i> balde lixo branco
+<i class="fa-solid fa-rotate-right"></i> atualizar
+<i class="fa-regular fa-rotate-right"></i> atualizar branco
+<i class="fa-solid fa-right-to-bracket"></i> logaut
+<i class="fa-regular fa-right-to-bracket"></i> logaut branco
+<i class="fa-solid fa-users"></i> users
+<i class="fa-regular fa-users"></i> users branco
+<i class="fa-solid fa-address-card"></i> cartão de endereço
+<i class="fa-brands fa-whatsapp"></i> whatsapp
+<i class="fa-solid fa-book"></i> livro
+<i class="fa-solid fa-graduation-cap"></i> chapeu
+<i class="fa-regular fa-graduation-cap"></i> chapeu branco
+<i class="fa-solid fa-folder-open"></i> pasta aberta
+
+
+
+
+
+
+
+
+
