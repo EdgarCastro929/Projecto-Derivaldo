@@ -1,40 +1,190 @@
 @charset "UTF-8";
+
+/* ========== MENU MOBILE ========== */
 header #mobile-menu{
     color: white;
     font-weight: bold;
     cursor: pointer;
     display: none;
+    font-size: 24px;
 }
-@media screen and (max-width:999px) {
+
+/* ========== RESPONSIVIDADE ========== */
+@media screen and (max-width: 999px) {
     body{
         overflow-x: hidden;
     }
+
+    /* Menu mobile */
     header .nav-list {
-        position: absolute;
-        top: 8vh;
+        position: fixed;
+        top: 0;
         right: 0;
-        width: 50vw;
-        height: 92vh;
+        width: 70vw;
+        height: 100vh;
         background-color: #dea93e;
         flex-direction: column;
-        align-items: center;
-        justify-content: space-around;
-        color: white;
+        align-items: stretch;
+        justify-content: flex-start;
+        padding: 80px 20px 20px 20px;
         transform: translateX(100%);
         transition: transform 0.3s ease-in;
-    }
-    header .nav-list a{
-        margin-left: 0;
-        opacity: 0 ;
-    }
-    header #mobile-menu{
-        display: block;
+        overflow-y: auto;
+        gap: 5px;
+        box-shadow: -5px 0 15px rgba(0,0,0,0.3);
     }
 
     header .nav-list.active{
         transform: translateX(0);
     }
+
+    header .nav-list a{
+        margin-left: 0;
+        opacity: 0;
+        padding: 12px 15px;
+        border-radius: 8px;
+        width: 100%;
+        text-align: left;
+    }
+
+    header .nav-list a:hover{
+        background-color: rgba(255, 255, 255, 0.15);
+    }
+
+    header #mobile-menu{
+        display: block;
+        z-index: 1002;
+    }
+
+    /* ===== SUBMENU NO MOBILE ===== */
+    .dropdown {
+        width: 100%;
+        position: relative;
+    }
+
+    .dropdown-toggle {
+        width: 100%;
+        justify-content: space-between;
+        padding: 12px 15px;
+        border-radius: 8px;
+        cursor: pointer;
+    }
+
+    .dropdown-toggle:hover {
+        background-color: rgba(255, 255, 255, 0.15);
+    }
+
+    .dropdown-content {
+        display: none;
+        position: static !important;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.15) !important;
+        box-shadow: none !important;
+        border-radius: 8px !important;
+        padding: 5px 0 !important;
+        margin: 5px 0 10px 0;
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+    }
+
+    .dropdown-content.open {
+        display: block !important;
+    }
+
+    .dropdown-content a {
+        color: #ffffff !important;
+        padding: 10px 20px 10px 35px !important;
+        border-radius: 5px !important;
+    }
+
+    .dropdown-content a:hover {
+        background-color: rgba(255, 255, 255, 0.1) !important;
+        color: #ffffff !important;
+    }
+
+    /* Botão Login no mobile */
+    .btn-login {
+        background-color: #ffaa00;
+        border-radius: 8px !important;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .btn-login:hover {
+        background-color: #e69900 !important;
+    }
+
+    /* Grid de livros */
+    main section#livros .todos-livros{
+        grid-template-columns: 200px 200px;
+        gap: 30px;
+    }
 }
+
+/* ========== TABLETS ========== */
+@media screen and (max-width: 768px) {
+    main section#livros .todos-livros{
+        grid-template-columns: 200px 200px;
+        gap: 20px;
+    }
+
+    main section.banner h1{
+        font-size: 1.2em;
+        line-height: 30px;
+        padding: 0 20px;
+    }
+
+    .dropdown-content {
+        min-width: unset;
+    }
+}
+
+/* ========== SMARTPHONES ========== */
+@media screen and (max-width: 480px) {
+    header .nav-list {
+        width: 85vw;
+        padding: 70px 15px 15px 15px;
+    }
+
+    header h1 {
+        font-size: 1.2em;
+    }
+
+    main section#livros .todos-livros{
+        grid-template-columns: 1fr;
+        gap: 15px;
+        justify-items: center;
+    }
+
+    main section#livros .todos-livros .card-livro {
+        width: 100%;
+        max-width: 250px;
+    }
+
+    main section#livros .todos-livros .card-livro img {
+        width: 100%;
+        max-width: 180px;
+    }
+
+    main section.banner h1{
+        font-size: 1em;
+        line-height: 25px;
+    }
+
+    main #livros #barraPesq{
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    main #livros #barraPesq input{
+        width: 90%;
+        max-width: 300px;
+    }
+}
+
+/* ========== ANIMAÇÃO DOS LINKS ========== */
 @keyframes navLinkFade {
     from{
         opacity: 0;

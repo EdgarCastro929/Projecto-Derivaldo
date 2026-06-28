@@ -9,15 +9,49 @@
     <title>LibryDeri</title>
 </head>
 <body>
-   <header>
+    <header>
         <h1>Libry<span>JDL</span></h1> 
 
         <i class="fa-solid fa-bars" id="mobile-menu"></i>  
         <menu class="nav-list">
+            <!-- Item simples -->
             <a href="index.html">Home</a>
-            <a href="livros.html">Livros</a>
-            <a href="#">Autores</a>
-            <a href="#">Login</a> 
+            
+            <!-- Submenu: Livros -->
+            <div class="dropdown">
+                <a href="livros.html" class="dropdown-toggle">Livros <i class="fa-solid fa-chevron-down"></i></a>
+                <div class="dropdown-content">
+                    <a href="livros.html">Catálogo</a>
+                    <a href="cadastrar-livro.html"> Cadastrar Livro</a>
+                    <a href="gerenciar-acervo.html">Gerenciar Acervo</a>
+                </div>
+            </div>
+            
+            <!-- Submenu: Empréstimos -->
+            <div class="dropdown">
+                <a href="#" class="dropdown-toggle">Empréstimos <i class="fa-solid fa-chevron-down"></i></a>
+                <div class="dropdown-content">
+                    <a href="meus-emprestimos.html"> Meus Empréstimos</a>
+                    <a href="registrar-emprestimo.html"> Registrar Empréstimo</a>
+                    <a href="registrar-devolucao.html">Registrar Devolução</a>
+                </div>
+            </div>
+            
+            <!-- Submenu: Usuário -->
+            <div class="dropdown">
+                <a href="#" class="dropdown-toggle">Usuário <i class="fa-solid fa-chevron-down"></i></a>
+                <div class="dropdown-content">
+                    <a href="perfil.html"> Meu Perfil</a>
+                    <a href="minhas-reservas.html"> Minhas Reservas</a>
+                    <a href="historico.html"> Histórico</a>
+                </div>
+            </div>
+            
+            <!-- Item simples -->
+            <a href="autores.html">Autores</a>
+            
+            <!-- Item simples com destaque -->
+            <a href="login.html" class="btn-login"> Entrar</a>
         </menu>
    </header>
    <main>

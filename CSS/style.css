@@ -5,20 +5,26 @@
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
 }
+
 :root{
-    --cor01:#ffffff;
-    --cor01:#f3c784;
-    --cor01:#dea93e;
-    --cor01:#ffaa00;
-    --cor01:#000000;
+    --cor01: #ffffff;
+    --cor02: #f3c784;
+    --cor03: #dea93e;
+    --cor04: #ffaa00;
+    --cor05: #000000;
+    --cor06: #f6dfbd;
 }
+
 body{
-    background-color:#ffffff;
+    background-color: #ffffff;
 }
+
 body a{
     text-decoration: none;
-    color:white;
+    color: white;
 }
+
+/* ========== HEADER ========== */
 header{
     background-color: #dea93e;
     padding: 25px;
@@ -26,33 +32,120 @@ header{
     justify-content: space-between;
     align-items: center;
     position: sticky;
-    top: 0%;
-    left: 0%;
+    top: 0;
+    left: 0;
     z-index: 1000;
 }
+
 header h1 span{
     color: #f3c784;
     font-size: 1.2em;
 }
+
 header h1{
     color: #ffffff;
 }
+
+/* ========== MENU PRINCIPAL ========== */
 header .nav-list{
     display: flex;
     flex-direction: row;
+    align-items: center;
+    gap: 5px;
 }
+
 header menu a{
     color: #ffffff;
     text-decoration: none;
-    margin: 7px;
-    padding: 7px;
+    padding: 10px 12px;
     cursor: pointer;
     font-weight: bold;
-    transition: all .5s;
+    transition: all .3s;
+    border-radius: 5px;
 }
+
 header menu a:hover{
     color: #f6dfbd;
+    background-color: rgba(255, 255, 255, 0.1);
 }
+
+/* ========== DROPDOWN / SUBMENU ========== */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-toggle {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.dropdown-toggle i {
+    font-size: 10px;
+    transition: transform 0.3s;
+}
+
+.dropdown:hover .dropdown-toggle i {
+    transform: rotate(180deg);
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 200px;
+    background-color: #ffffff;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    padding: 8px 0;
+    z-index: 1001;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.dropdown-content a {
+    color: #333333 !important;
+    padding: 10px 20px !important;
+    display: block !important;
+    font-weight: normal !important;
+    border-radius: 0 !important;
+    margin: 0 !important;
+    transition: all 0.2s;
+}
+
+.dropdown-content a:hover {
+    background-color: #f3c784 !important;
+    color: #000000 !important;
+}
+
+.dropdown-content a i {
+    margin-right: 8px;
+    width: 18px;
+}
+
+/* ========== BOTÃO LOGIN DESTACADO ========== */
+.btn-login {
+    background-color: #ffaa00;
+    border-radius: 20px !important;
+    padding: 10px 20px !important;
+    transition: all 0.3s;
+}
+
+.btn-login:hover {
+    background-color: #e69900 !important;
+    transform: scale(1.05);
+}
+
+/* ========== BANNER ========== */
 main section.banner{
     height: 50vh;
     display: flex;
@@ -63,6 +156,7 @@ main section.banner{
     background-position: top center;
     background-size: cover;
 }
+
 main section.banner h1{
     text-align: center;
     line-height: 50px;
@@ -71,54 +165,63 @@ main section.banner h1{
     font-weight: bolder;
     text-transform: uppercase;
 }
+
+/* ========== SEÇÃO LIVROS ========== */
 main section#livros h2{
     color: #dea93e;
     border-bottom: 2px solid #dea93e;
     margin: 20px 0px;
     text-indent: 10px;
 }
+
 main #livros #barraPesq{
     display: flex;
     justify-content: space-around;
-    input{
-        width: 200px;
-        height: 50px;
-        margin-top: 15px;
-        border: none;
-        background-color: #f6dfbd;
-        padding: 7px;
-        border-radius: 20px;
-    }
 }
+
+main #livros #barraPesq input{
+    width: 200px;
+    height: 50px;
+    margin-top: 15px;
+    border: none;
+    background-color: #f6dfbd;
+    padding: 7px;
+    border-radius: 20px;
+}
+
 main #livros #barraPesq .enviarPesq form #btn2{
     padding: 7px 20px;
     cursor: pointer;
     border: none;
-    background-color:  #dea93e;
+    background-color: #dea93e;
     border-radius: 20px;
     font-weight: bold;
     transition: all .5s;
     color: white;
 }
+
 main #livros #barraPesq .enviarPesq form #btn2:hover{
-    background-color:  #ffaa00;
+    background-color: #ffaa00;
 }
+
 main #livros #barraPesq .enviarPesq button{
     padding: 7px 20px;
     cursor: pointer;
     border: none;
-    background-color:  #dea93e;
+    background-color: #dea93e;
     border-radius: 10px;
     font-weight: bold;
     transition: all .5s;
     color: white;
 }
+
 main #livros #barraPesq .enviarPesq button:hover{
-    background-color:  #ffaa00;
+    background-color: #ffaa00;
 }
+
 main section#livros .todos-livros{
     display: grid;
-    grid-template-columns:  200px 200px 200px 200px;
+    grid-template-columns: 200px 200px 200px 200px;
     grid-template-rows: auto;
     grid-auto-rows: auto;
     grid-auto-columns: auto;
@@ -127,6 +230,7 @@ main section#livros .todos-livros{
     gap: 50px;
     margin-bottom: 30px;    
 }
+
 main section#livros .todos-livros .card-livro{
     background-color: #f3c784;
     cursor: pointer;
@@ -136,12 +240,14 @@ main section#livros .todos-livros .card-livro{
     box-shadow: -4px 6px 3px 0px #93939315;
     transition: all .5s;
 }
+
 main section#livros .todos-livros .card-livro h1{
     font-size: 14pt;
     font-weight: bold;
     text-align: left;
     color: #000000;
 }
+
 main section#livros .todos-livros .card-livro p{
     font-size: 12pt;
     font-style: italic;
@@ -149,16 +255,19 @@ main section#livros .todos-livros .card-livro p{
     margin-top: 7px;
     color: #ffffff;
 }
+
 main section#livros .todos-livros .card-livro img{
     border-radius: 10px;
     cursor: pointer;
     width: 180px;
     margin-bottom: 7px;
 }
+
 main section#livros .todos-livros .card-livro:hover{
     background-color: #f6dfbd;
 }
 
+/* Grid positioning */
 main section#livros .todos-livros .card-livro #card-liv1{grid-area: 1/1/2/2;}
 main section#livros .todos-livros .card-livro #card-liv2{grid-area: 1/2/2/3;}
 main section#livros .todos-livros .card-livro #card-liv3{grid-area: 1/3/2/4;}
@@ -170,24 +279,29 @@ main section#livros #btn1{
     align-items: center;
     margin: 25px 0px;
 }
+
 main section#livros #btn1 button{
     padding: 7px 20px;
     cursor: pointer;
     border: none;
-    background-color:  #ffaa00;
+    background-color: #ffaa00;
     border-radius: 10px;
     font-weight: bold;
     transition: all .5s;
 }
+
 main section#livros #btn1 button:hover{
-   background-color:  #dea93e; 
+    background-color: #dea93e; 
 }
+
+/* ========== FOOTER ========== */
 footer{
     background-color: #dea93e;
     padding: 20px;
     text-align: center;
     font-style: italic;
 }
+
 footer p{
     border-top: 2px solid rgba(0, 0, 0, 0.09);
     padding-top: 20px;
