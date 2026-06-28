@@ -5,6 +5,10 @@
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
 }
+@font-face {
+    font-family: "laton";
+    src: url("../fonts/Lato-Black.ttf") format("truetype");
+}
 
 :root{
     --cor01: #ffffff;
@@ -13,6 +17,22 @@
     --cor04: #ffaa00;
     --cor05: #000000;
     --cor06: #f6dfbd;
+    /*-------------------*/
+
+    --bg-primary: #F8F9FA;
+    --bg-secondary: #FFFFFF;
+    --text-primary: #2D2D2D;
+    --text-secondary: #1E3A5F;
+    --accent: #E8B931;
+    --accent-hover: #F0C94A;
+    --border: #D97A7A;
+    --header-bg: #1E3A5F;
+    --header-text: #F8F9FA;
+
+    --font1:"laton";
+    --fon2:"Marrie";
+    --fon3:"Play";
+
 }
 
 body{
@@ -40,6 +60,7 @@ header{
 header h1 span{
     color: #f3c784;
     font-size: 1.2em;
+    font-family: var(--font1);
 }
 
 header h1{
@@ -178,45 +199,44 @@ main #livros #barraPesq{
     display: flex;
     justify-content: space-around;
 }
-
-main #livros #barraPesq input{
+main #livros #barraPesq .enviarPesq form{
+    background-color: #E8B931;
+    border-radius: 20px;
+    margin-top: 7px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main #livros #barraPesq form input{
     width: 200px;
-    height: 50px;
-    margin-top: 15px;
+    height: 100%;
     border: none;
-    background-color: #f6dfbd;
+    background-color: #E8B931;
     padding: 7px;
     border-radius: 20px;
 }
-
 main #livros #barraPesq .enviarPesq form #btn2{
-    padding: 7px 20px;
     cursor: pointer;
     border: none;
-    background-color: #dea93e;
     border-radius: 20px;
     font-weight: bold;
     transition: all .5s;
-    color: white;
+    color: #000000;
+    font-size: 13pt
 }
-
 main #livros #barraPesq .enviarPesq form #btn2:hover{
-    background-color: #ffaa00;
+    color: #ffaa00;
 }
-
 main #livros #barraPesq .enviarPesq button{
-    padding: 7px 20px;
+    padding: 7px;
     cursor: pointer;
-    border: none;
-    background-color: #dea93e;
-    border-radius: 10px;
     font-weight: bold;
     transition: all .5s;
     color: white;
 }
-
 main #livros #barraPesq .enviarPesq button:hover{
-    background-color: #ffaa00;
+    color: #dea93e;
 }
 
 main section#livros .todos-livros{

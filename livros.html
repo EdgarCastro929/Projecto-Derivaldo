@@ -4,17 +4,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/responsividade.css">
     <link rel="stylesheet" href="fontawesome-free-7.3.0-web/css/all.min.css">
     <title>LibryDeri</title>
 </head>
 <body>
    <header>
-        <h1>Libry<span>JDL</span></h1>   
+        <h1>Libry<span>JDL</span></h1> 
+
+        <i class="fa-solid fa-bars" id="mobile-menu"></i>  
         <menu class="nav-list">
+            <!-- Item simples -->
             <a href="index.html">Home</a>
-            <a href="livros.html">Livros</a>
-            <a href="#">Autores</a>
-            <a href="#">Login</a> 
+            
+            <!-- Submenu: Livros -->
+            <div class="dropdown">
+                <a href="livros.html" class="dropdown-toggle">Livros <i class="fa-solid fa-chevron-down"></i></a>
+                <div class="dropdown-content">
+                    <a href="livros.html">Catálogo</a>
+                    <a href="cadastrar-livro.html"> Cadastrar Livro</a>
+                    <a href="gerenciar-acervo.html">Gerenciar Acervo</a>
+                </div>
+            </div>
+            
+            <!-- Submenu: Empréstimos -->
+            <div class="dropdown">
+                <a href="#" class="dropdown-toggle">Empréstimos <i class="fa-solid fa-chevron-down"></i></a>
+                <div class="dropdown-content">
+                    <a href="meus-emprestimos.html"> Meus Empréstimos</a>
+                    <a href="registrar-emprestimo.html"> Registrar Empréstimo</a>
+                    <a href="registrar-devolucao.html">Registrar Devolução</a>
+                </div>
+            </div>
+            
+            <!-- Submenu: Usuário -->
+            <div class="dropdown">
+                <a href="#" class="dropdown-toggle">Usuário <i class="fa-solid fa-chevron-down"></i></a>
+                <div class="dropdown-content">
+                    <a href="perfil.html"> Meu Perfil</a>
+                    <a href="minhas-reservas.html"> Minhas Reservas</a>
+                    <a href="historico.html"> Histórico</a>
+                </div>
+            </div>
+            
+            <!-- Item simples -->
+            <a href="autores.html">Autores</a>
+            
+            <!-- Item simples com destaque -->
+            <a href="login.html" class="btn-login"> Entrar</a>
         </menu>
    </header>
    <main>
@@ -28,7 +65,7 @@
         <div id="barraPesq">
             <h2>Livros</h2>
             <div class="enviarPesq">
-                <form action="#" method="#">
+                <form action="#" method="post">
                     <input type="search" name="pesquisar" id="idpesquisar" placeholder="procurar autores e livros...">
                     <button type="submit" id="btn2"><i class="fa-solid fa-magnifying-glass"></i></button>
                 </form>
@@ -37,83 +74,115 @@
         <div class="todos-livros">
             <div class="card-livro" id="card-liv1">
                 <img src="img/Eu e minhas lutas internas e Deus.jpg" alt="">
-                <h1 id="titulo-livro">Título: Eu e minhas lutas internas e Deus</h1>
-                <p>Autor: Estela Costa</p>
+                <div id="discricao">
+                    <h1 id="titulo-livro">Título: Eu e minhas lutas internas e Deus</h1>
+                    <p>Autor: Estela Costa</p>
+                </div>
             </div>
             <div class="card-livro" id="card-liv2">
                 <img src="img/As 48 leis do poder.jpg" alt="">
-                <h1 id="titulo-livro">Título: As 48 leis do poder</h1>
-                <p>Autor: Robert Greene</p>
+                <div id="discricao">
+                    <h1 id="titulo-livro">Título: As 48 leis do poder</h1>
+                    <p>Autor: Robert Greene</p>
+                </div>
             </div>
             <div class="card-livro" id="card-liv3">
                 <img src="img/Comece Pelo Porquê.jpg" alt="">
-                <h1 id="titulo-livro">Título: Comece Pelo Porquê</h1>
-                <p>Autor: Simom Sinek</p>
+                <div id="discricao">
+                    <h1 id="titulo-livro">Título: Comece Pelo Porquê</h1>
+                    <p>Autor: Simom Sinek</p>
+                </div>
             </div>
             <div class="card-livro" id="card-liv4">
                 <img src="img/Hábitos Atômicos.jpg" alt="">
-                <h1 id="titulo-livro">Título: Hábitos Atômicos</h1>
-                <p>Autor: James Clear</p>
+                <div id="discricao">
+                    <h1 id="titulo-livro">Título: Hábitos Atômicos</h1>
+                    <p>Autor: James Clear</p>
+                </div>
             </div>
              <div class="card-livro" id="card-liv4">
                 <img src="img/Como convencer alguem.jpg" alt="">
-                <h1 id="titulo-livro">Título: Como convencer alguem</h1>
-                <p>Autor: Nicolas Boothman</p>
+                <div id="discricao">
+                    <h1 id="titulo-livro">Título: Como convencer alguem</h1>
+                    <p>Autor: Nicolas Boothman</p>
+                </div>
             </div>
              <div class="card-livro" id="card-liv4">
                 <img src="img/Como Decifrar Mentes.jpg" alt="">
-                <h1 id="titulo-livro">Título: Como Decifrar Mentes</h1>
-                <p>Autor: David J. Lierberman</p>
+                <div id="discricao">
+                    <h1 id="titulo-livro">Título: Como Decifrar Mentes</h1>
+                    <p>Autor: David J. Lierberman</p>
+                </div>
             </div>
              <div class="card-livro" id="card-liv4">
                 <img src="img/Como fazer alguem gostar de você.jpg" alt="">
-                <h1 id="titulo-livro">Título: Como fazer alguem gostar de você</h1>
-                <p>Autor: Nicolas Boothman</p>
+                <div id="discricao">
+                    <h1 id="titulo-livro">Título: Como fazer alguem gostar de você</h1>
+                    <p>Autor: Nicolas Boothman</p>
+                </div>
             </div>
              <div class="card-livro" id="card-liv4">
                 <img src="img/Imunidade Psicólogica.jpg" alt="">
-                <h1 id="titulo-livro">Título: Imunidade Psicólogica</h1>
-                <p>Autor: Christophe Massin</p>
+                <div id="discricao">
+                    <h1 id="titulo-livro">Título: Imunidade Psicólogica</h1>
+                    <p>Autor: Christophe Massin</p>
+                </div>
             </div>
              <div class="card-livro" id="card-liv4">
                 <img src="img/In Distraível.jpg" alt="">
-                <h1 id="titulo-livro">Título: In Distraível</h1>
-                <p>Autor: Nir Eyal</p>
+                <div id="discricao">
+                    <h1 id="titulo-livro">Título: In Distraível</h1>
+                    <p>Autor: Nir Eyal</p>
+                </div>
             </div>
              <div class="card-livro" id="card-liv4">
                 <img src="img/Jesus o que nao foi dito.jpg" alt="">
-                <h1 id="titulo-livro">Título: Jesus o que nao foi dito</h1>
-                <p>Autor: Francis Valadi</p>
+                <div id="discricao">
+                    <h1 id="titulo-livro">Título: Jesus o que nao foi dito</h1>
+                    <p>Autor: Francis Valadi</p>
+                </div>
             </div>
              <div class="card-livro" id="card-liv4">
                 <img src="img/La Bible de Bunberg.jpg" alt="">
-                <h1 id="titulo-livro">Título: La Bible de Bunberg</h1>
-                <p>Autor: Gutenberg</p>
+                <div id="discricao">
+                    <h1 id="titulo-livro">Título: La Bible de Bunberg</h1>
+                    <p>Autor: Gutenberg</p>
+                </div>
             </div>
              <div class="card-livro" id="card-liv4">
                 <img src="img/Livros.jpg" alt="">
-                <h1 id="titulo-livro">Título: Livros</h1>
-                <p>Autor: Black Crouch</p>
+                <div id="discricao">
+                    <h1 id="titulo-livro">Título: Livros</h1>
+                    <p>Autor: Black Crouch</p>
+                </div>
             </div>
              <div class="card-livro" id="card-liv4">
                 <img src="img/O ego é o seu pior inimigo.jpg" alt="">
-                <h1 id="titulo-livro">Título: O ego é o seu pior inimigo</h1>
-                <p>Autor: Ryan Holiday</p>
+                <div id="discricao">
+                    <h1 id="titulo-livro">Título: O ego é o seu pior inimigo</h1>
+                    <p>Autor: Ryan Holiday</p>
+                </div>
             </div>
              <div class="card-livro" id="card-liv4">
                 <img src="img/O Lado Feio Do Amor.jpg" alt="">
-                <h1 id="titulo-livro">Título: O Lado Feio Do Amor</h1>
-                <p>Autor: Colleen Hoover</p>
+                <div id="discricao">
+                    <h1 id="titulo-livro">Título: O Lado Feio Do Amor</h1>
+                    <p>Autor: Colleen Hoover</p>
+                </div>
             </div>
              <div class="card-livro" id="card-liv4">
                 <img src="img/O poder do hábito.jpg" alt="">
-                <h1 id="titulo-livro">Título: O poder do hábito</h1>
-                <p>Autor: Charles Duhigg</p>
+                <div id="discricao">
+                    <h1 id="titulo-livro">Título: O poder do hábito</h1>
+                    <p>Autor: Charles Duhigg</p>
+                </div>
             </div>
              <div class="card-livro" id="card-liv4">
                 <img src="img/Pai Rico Pai Pobre.jpg" alt="">
-                <h1 id="titulo-livro">Título: Pai Rico Pai Pobre</h1>
-                <p>Autor: Robert T. Kiyosaki</p>
+                <div id="discricao">
+                    <h1 id="titulo-livro">Título: Pai Rico Pai Pobre</h1>
+                    <p>Autor: Robert T. Kiyosaki</p>
+                </div>
             </div>
         </div>
       </section>
@@ -122,5 +191,7 @@
    <footer>
         <p>Create by Derivaldo & Jorge & Leitão</p>
    </footer>
+
+   <script src="js/mobile-navbar.js"></script>
 </body>
 </html>
