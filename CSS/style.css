@@ -60,11 +60,12 @@ header{
 header h1 span{
     color: #f3c784;
     font-size: 1.2em;
-    font-family: var(--font1);
+    
 }
 
 header h1{
     color: #ffffff;
+    font-family: var(--font1);
 }
 
 /* ========== MENU PRINCIPAL ========== */
@@ -83,6 +84,7 @@ header menu a{
     font-weight: bold;
     transition: all .3s;
     border-radius: 5px;
+    font-family: var(--font1);
 }
 
 header menu a:hover{
@@ -185,6 +187,7 @@ main section.banner h1{
     color: #f3c784;
     font-weight: bolder;
     text-transform: uppercase;
+    font-family: var(--font1);
 }
 
 /* ========== SEÇÃO LIVROS ========== */
@@ -193,6 +196,7 @@ main section#livros h2{
     border-bottom: 2px solid #dea93e;
     margin: 20px 0px;
     text-indent: 10px;
+    font-family: var(--fon3);
 }
 
 main #livros #barraPesq{
@@ -266,6 +270,7 @@ main section#livros .todos-livros .card-livro h1{
     font-weight: bold;
     text-align: left;
     color: #000000;
+    font-family: var(--fon3);
 }
 
 main section#livros .todos-livros .card-livro p{
@@ -274,6 +279,7 @@ main section#livros .todos-livros .card-livro p{
     font-weight: normal;
     margin-top: 7px;
     color: #ffffff;
+    font-family: var(--fon3);
 }
 
 main section#livros .todos-livros .card-livro img{
