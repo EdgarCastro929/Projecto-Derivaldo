@@ -1,0 +1,65 @@
+@charset "UTF-8";
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+@font-face {
+    font-family: "laton";
+    src: url("../fonts/Lato-Black.ttf") format("truetype");
+}
+
+:root{
+    --cor01: #ffffff;
+    --cor02: #f3c784;
+    --cor03: #dea93e;
+    --cor04: #ffaa00;
+    --cor05: #000000;
+    --cor06: #f6dfbd;
+    /*-------------------*/
+
+    --bg-primary: #F8F9FA;
+    --bg-secondary: #FFFFFF;
+    --text-primary: #2D2D2D;
+    --text-secondary: #1E3A5F;
+    --accent: #E8B931;
+    --accent-hover: #F0C94A;
+    --border: #D97A7A;
+    --header-bg: #1E3A5F;
+    --header-text: #F8F9FA;
+
+    --font1:"laton";
+    --fon2:"Marrie";
+    --fon3:"Play";
+}
+body{
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+}
+main{ 
+    background-color: var(--cor01);
+}
+main .conteiner{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    background-color: var(--cor02);
+}
+main .conteiner h1 span{
+    color: var(--cor04);
+    font-size: 1.2em;
+}
+main .conteiner form .form-grup{ 
+    display:flex;
+    flex-direction:column;
+    margin-bottom: 1em;
+}
+main .conteiner form button{ 
+    width: 100%;
+    padding: 0.5em;
+    
+}
+
